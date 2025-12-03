@@ -30,17 +30,12 @@ module.exports = {
     
     // Paginação
     pagination: '.pagination, [rel="next"], [rel="prev"], a[href*="page"]',
-    nextButton: '[rel="next"], .next',
-    prevButton: '[rel="prev"], .previous, .prev',
     
     // Footer
     footer: 'footer, .footer, .site-footer',
     footerLinks: 'footer a, .footer a',
     socialLinks: '[href*="facebook"], [href*="instagram"], [href*="linkedin"], [href*="tiktok"]',
     appStoreLinks: '[href*="play.google"], [href*="apple"], [href*="app-store"]',
-    
-    // Busca
-    searchInput: 'input[type="search"], [placeholder*="busca"], [placeholder*="pesquisa"]',
     
     // Elementos gerais
     body: 'body',
@@ -86,11 +81,6 @@ module.exports = {
     await I.seeElement(this.selectors.storyImages);
   },
 
-  async clicarStory() {
-    await I.click(this.selectors.storiesContainer);
-    await I.waitForElement(this.selectors.body);
-  },
-
   async verificarSecaoArtigos() {
     await I.scrollTo(this.selectors.articlesSection);
     await I.seeElement(this.selectors.articlesList);
@@ -113,32 +103,11 @@ module.exports = {
     await I.seeElement(this.selectors.pagination);
   },
 
-  async clicarProximaPagina() {
-    await I.click(this.selectors.nextButton);
-    await I.waitForElement(this.selectors.body);
-  },
-
-  async redimensionarJanela(largura) {
-    await I.resizeWindow(largura, 800);
-    await I.wait(2);
-  },
-
-  async verificarResponsividade() {
-    await I.dontSeeElement('.horizontal-scroll, .overflow');
-    await I.seeElement(this.selectors.mainNav);
-  },
-
   async verificarCarregamentoImagens() {
     const imagensBroken = await I.grabNumberOfVisibleElements(this.selectors.brokenImages);
     if (imagensBroken !== 0) {
       throw new Error('Não deve haver imagens quebradas');
     }
-  },
-
-  async pesquisar(termo) {
-    await I.fillField(this.selectors.searchInput, termo);
-    await I.pressKey('Enter');
-    await I.waitForElement(this.selectors.body);
   },
 
   async voltarHome() {
@@ -162,13 +131,5 @@ module.exports = {
     for (const erro of erros) {
       await I.dontSee(erro);
     }
-  },
-
-  async scrollParaElemento(elemento) {
-    await I.scrollTo(elemento);
-  },
-
-  async clicarElemento(seletor) {
-    await I.click(seletor);
   }
 }
