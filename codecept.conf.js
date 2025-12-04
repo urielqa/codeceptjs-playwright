@@ -1,9 +1,3 @@
-// require('./heal_recipes'); // ou './path/to/heal'
-require('dotenv').config({ path: '.env' });
-
-// const Groq = require("groq-sdk");
-// const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
-
 exports.config = {
   output: './output',
     helpers: {
