@@ -46,17 +46,17 @@ module.exports = {
   // Métodos da página
   async abrirPagina() {
     await I.amOnPage(this.url);
-    await I.waitForElement(this.selectors.body);
+    I.waitForElement(this.selectors.body);
   },
 
-  async verificarElementosBasicos() {
-    await I.seeElement(this.selectors.logo);
-    await I.seeElement(this.selectors.mainNav);
-    await I.seeElement(this.selectors.footer);
+  verificarElementosBasicos() {
+    I.seeElement(this.selectors.logo);
+    I.seeElement(this.selectors.mainNav);
+    I.seeElement(this.selectors.footer);
   },
 
-  async verificarTitulo(titulo) {
-    await I.seeInTitle(titulo);
+  verificarTitulo(titulo) {
+    I.seeInTitle(titulo);
   },
 
   async verificarMenu() {
@@ -69,38 +69,38 @@ module.exports = {
 
   async verificarSecaoStories() {
     await I.scrollTo(this.selectors.storiesSection);
-    await I.see('Stories');
-    await I.seeElement(this.selectors.storiesContainer);
+    I.see('Stories');
+    I.seeElement(this.selectors.storiesContainer);
   },
 
   async contarStories() {
-    return await I.grabNumberOfVisibleElements(this.selectors.storiesContainer);
+    return I.grabNumberOfVisibleElements(this.selectors.storiesContainer);
   },
 
-  async verificarImagensStories() {
-    await I.seeElement(this.selectors.storyImages);
+  verificarImagensStories() {
+    I.seeElement(this.selectors.storyImages);
   },
 
   async verificarSecaoArtigos() {
     await I.scrollTo(this.selectors.articlesSection);
-    await I.seeElement(this.selectors.articlesList);
+    I.seeElement(this.selectors.articlesList);
   },
 
-  async verificarElementosArtigo() {
-    await I.seeElement(this.selectors.articleImages);
-    await I.seeElement(this.selectors.articleTitles);
-    await I.seeElement(this.selectors.articleLinks);
-    await I.seeElement(this.selectors.categories);
+  verificarElementosArtigo() {
+    I.seeElement(this.selectors.articleImages);
+    I.seeElement(this.selectors.articleTitles);
+    I.seeElement(this.selectors.articleLinks);
+    I.seeElement(this.selectors.categories);
   },
 
   async clicarArtigo() {
     await I.click(this.selectors.articleLinks);
-    await I.waitForElement(this.selectors.body);
+    I.waitForElement(this.selectors.body);
   },
 
   async verificarPaginacao() {
     await I.scrollTo(this.selectors.pagination);
-    await I.seeElement(this.selectors.pagination);
+    I.seeElement(this.selectors.pagination);
   },
 
   async verificarCarregamentoImagens() {
@@ -112,24 +112,24 @@ module.exports = {
 
   async voltarHome() {
     await I.click(this.selectors.logo);
-    await I.waitForElement(this.selectors.body);
+    I.waitForElement(this.selectors.body);
   },
 
   async verificarSecaoEmprestimos() {
     await I.scrollTo(this.selectors.loanSection);
-    await I.see('empréstimo');
-    await I.seeElement(this.selectors.articlesList);
+    I.see('empréstimo');
+    I.seeElement(this.selectors.articlesList);
   },
 
   async aguardarCarregamentoCompleto() {
-    await I.waitForElement(this.selectors.body);
+    I.waitForElement(this.selectors.body);
     await I.wait(3);
   },
 
   async verificarSemErros() {
     const erros = ['404', '500', 'Error', 'Erro', 'Not Found'];
     for (const erro of erros) {
-      await I.dontSee(erro);
+      I.dontSee(erro);
     }
   }
 }
