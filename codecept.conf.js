@@ -10,15 +10,13 @@ exports.config = {
     Playwright: {
       browser: 'chromium',
       url: 'https://blog.agibank.com.br/',
-      show: true
+      show: false
     }
   },
   include: {
     I: './steps_file.js',
     homePage: './src/pages/home.js',
-    navigationPage: './src/pages/navigation.js',
     articlesPage: './src/pages/articles.js',
-    storiesPage: './src/pages/stories.js',
     footerPage: './src/pages/footer.js',
   },
   mocha: {},

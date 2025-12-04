@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx codeceptjs run --debug",
+    "test-home": "npx codeceptjs run --grep @home --debug",
+    "test-articles": "npx codeceptjs run --grep @articles --debug",
+    "allure": "npx allure generate --clean"
   },
   "keywords": [],
   "author": "",
