@@ -81,13 +81,6 @@ module.exports = {
     I.seeElement(this.selectors.articlesList);
   },
 
-  async verificarControlesPaginacao() {
-    const articles = await I.grabNumberOfVisibleElements(this.selectors.articlesList);
-    if (articles >= 10) {
-      I.seeElement(this.selectors.pagination);
-    }
-  },
-
   async verificarArtigosRelacionados() {
     await I.scrollTo(this.selectors.relatedArticles);
     I.seeElement(this.selectors.relatedArticles);

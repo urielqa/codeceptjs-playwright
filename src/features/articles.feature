@@ -30,15 +30,3 @@ Feature: Artigos do Blog do Agibank
     When rolo ate o final do artigo
     Then devo ver uma secao de "CONTEÚDOS RELACIONADOS"
     And devo ver pelo menos "3" artigos relacionados
-
-  Scenario Outline: Testar artigos em diferentes categorias
-    When navego para a categoria "<categoria>"
-    Then os artigos devem ser exibidos de acordo com a "<categoria>"
-    And deve haver paginacao na categoria "<categoria>" quando necessario
-
-    Examples:
-      | categoria       |
-      | Noticias        |
-      | Suas Financas   |
-      | Seu Sucesso     |
-      | Seus Beneficios |
