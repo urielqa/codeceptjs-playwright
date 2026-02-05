@@ -1,7 +1,7 @@
 {
-  "name": "codeceptjs-playwright-ai",
+  "name": "codeceptjs-playwright",
   "version": "1.0.0",
-  "description": "",
+  "description": "Framework E2E CodeceptJS + Playwright para o Blog do Agibank - BDD, Page Object e Allure Reports",
   "main": "index.js",
   "scripts": {
     "test": "npx codeceptjs run --debug",
@@ -12,8 +12,17 @@
     "allure-server": "npx allure serve allure-report",
     "test-all": "npx codeceptjs run && npm run allure-generate && npm run allure-open"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "codeceptjs",
+    "playwright",
+    "e2e",
+    "automation",
+    "qa",
+    "agibank",
+    "bdd",
+    "allure"
+  ],
+  "author": "Uriel Sampaio <urielsqa@gmail.com> (https://github.com/urielqa)",
   "license": "ISC",
   "dependencies": {
     "allure-codeceptjs": "^3.4.1",

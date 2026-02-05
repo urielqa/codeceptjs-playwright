@@ -1,6 +1,6 @@
-# 🚀 CodeceptJS + Playwright - Blog Agibank Test Suite
-
 <div align="center">
+
+# 🚀 CodeceptJS + Playwright - Blog Agibank Test Suite
 
 ![CodeceptJS](https://img.shields.io/badge/CodeceptJS-3.6.7-green.svg)
 ![Playwright](https://img.shields.io/badge/Playwright-1.49-blue.svg)
@@ -9,6 +9,12 @@
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)
 
 *Framework de testes automatizados E2E para o Blog do Agibank*
+
+**por [Uriel Sampaio](https://github.com/urielqa)** · Analista de QA | Automação Web E2E
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/uriel-sampaio-728184356/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white)](https://github.com/urielqa)
+[![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:urielsqa@gmail.com)
 
 [🎯 Recursos](#-recursos) • [🚀 Instalação](#-instalação) • [📝 Uso](#-uso) • [🧪 Testes](#-executando-testes) • [📊 Reports](#-relatórios)
 
@@ -82,7 +88,7 @@ npm --version   # v9.0.0 ou superior
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/ZyamHunter/codeceptjs-playwright.git
+git clone https://github.com/urielqa/codeceptjs-playwright.git
 cd codeceptjs-playwright
 
 # 2. Instale as dependências
@@ -336,7 +342,9 @@ chore: tarefas de manutenção
 
 ### 🌟 Desenvolvido com ❤️ para automação de testes de qualidade
 
-**[⬆️ Voltar ao topo](#-codeceptjs--playwright---blog-agibank-test-suite)**
+**Feito com ❤️ por [Uriel Sampaio](https://github.com/urielqa)**
+
+[⬆️ Voltar ao topo](#-codeceptjs--playwright---blog-agibank-test-suite)
 
 </div>
 
@@ -346,4 +354,4 @@ Este projeto está sob a licença [ISC](LICENSE).
 
 ---
 
-*Última atualização: Dezembro 2025*
+*Última atualização: Fevereiro 2025*
