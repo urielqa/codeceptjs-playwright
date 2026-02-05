@@ -27,8 +27,10 @@
   "dependencies": {
     "allure-codeceptjs": "^3.4.1",
     "allure-commandline": "^2.34.1",
-    "codeceptjs": "^3.6.7",
-    "dotenv": "^16.4.5",
-    "playwright": "1.49"
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "codeceptjs": "^3.7.6",
+    "playwright": "^1.58.1"
   }
 }

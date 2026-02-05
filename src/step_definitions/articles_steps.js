@@ -18,8 +18,8 @@ Then('devo ver pelo menos {string} artigos visiveis', async (count) => {
   }
 });
 
-When('clico no link de um artigo', () => {
-  articlesPage.clicarArtigo();
+When('clico no link de um artigo', async () => {
+  await articlesPage.clicarArtigo();
 });
 
 Then('devo ver o conteudo completo do artigo', () => {

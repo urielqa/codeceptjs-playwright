@@ -40,13 +40,13 @@ exports.config = {
       enabled: true,
     },
     tryTo: {
-      enabled: true,
+      enabled: false,
     },
     retryFailedStep: {
       enabled: false,
     },
     retryTo: {
-      enabled: true,
+      enabled: false,
     },
     eachElement: {
       enabled: false,

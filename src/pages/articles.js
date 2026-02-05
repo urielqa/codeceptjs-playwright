@@ -12,7 +12,7 @@ module.exports = {
     articleTitles: 'h1, h2, h3, .title, .post-title',
     articleImages: 'article img, .post img, .featured-image',
     articleExcerpts: '.excerpt, .summary, .description, p',
-    articleDates: '//*[@class="posted-on"]',
+    articleDates: '.posted-on, .date, time, .entry-date, .uagb-post__date, [class*="date"]',
     articleCategories: '.category, .tag, [href*="categoria"]',
     readMoreLinks: '.read-more, [href*="/blog/"], article a',
     
@@ -47,10 +47,11 @@ module.exports = {
     I.seeElement(this.selectors.articleCategories);
   },
 
-  clicarArtigo() {
-    I.amOnPage("https://blog.agibank.com.br/servicos/")
-    I.waitForElement(this.selectors.articleLinks, 10);
-    I.click(this.selectors.articleLinks);
+  async clicarArtigo() {
+    await I.scrollTo(this.selectors.articlesSection);
+    I.waitForElement(this.selectors.articlesList, 10);
+    // Clica no primeiro link de artigo (título) da seção Últimas do Blog
+    I.click('.uagb-post__title a, article h2 a, article .post-title a');
   },
 
   async verificarPaginaArtigo() {
